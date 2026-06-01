@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeSentinel — Analyze Python and SQL code for security vulnerabilities, style issues, complexity, and more.">
+  <title>CodeSentinel — Static Code Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <header class="header">
+    <h1>🛡️ CodeSentinel</h1>
+    <p>Static Code Analyzer — Python &amp; SQL</p>
+  </header>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <div class="lang-toggle-inner">
+      <button class="lang-btn active" data-lang="python" id="btn-python">
+        <span class="icon">🐍</span> Python
+      </button>
+      <button class="lang-btn" data-lang="sql" id="btn-sql">
+        <span class="icon">🗄️</span> SQL
+      </button>
+    </div>
+  </div>
+
+  <!-- Code Editor -->
+  <div class="editor-card">
+    <div class="editor-header">
+      <div class="editor-dots">
+        <span></span><span></span><span></span>
+      </div>
+      <span class="editor-title" id="editor-title">main.py</span>
+    </div>
+    <div class="editor-body">
+      <div class="line-numbers" id="line-numbers" aria-hidden="true"></div>
+      <textarea id="code-input"
+                placeholder="# Paste your Python code here...&#10;import os&#10;&#10;def main():&#10;    pass"
+                spellcheck="false"
+                autocomplete="off"
+                autocapitalize="off"></textarea>
+    </div>
+  </div>
+
+  <!-- Analyze Button -->
+  <div class="analyze-wrap">
+    <button id="analyze-btn">
+      <span class="btn-text">⚡ Analyze Code</span>
+      <span class="spinner"></span>
+    </button>
+  </div>
+
+  <!-- Results -->
+  <div id="results"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    CodeSentinel — Static Code Analyzer &nbsp;|&nbsp; Compiler Design Project
+  </footer>
+
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
